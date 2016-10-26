@@ -1,0 +1,26 @@
+{
+
+  "manifest_version": 2,
+
+  "name": "Mage Browser",
+  "description": "This extension was created to help Magento developers.",
+  "version": "1.0.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Open Mage Browser Configurations"
+  },
+
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "js": ["clipboard.min.js", "app.js"]
+    }
+  ]
+}
